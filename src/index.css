@@ -1,0 +1,177 @@
+@import "tailwindcss";
+
+@layer utilities {
+  .font-serif {
+    font-family: 'Crimson Pro', Georgia, serif;
+  }
+  .font-medieval {
+    font-family: 'MedievalSharp', cursive, serif;
+  }
+  .font-cinzel {
+    font-family: 'Cinzel', serif;
+  }
+}
+
+/* Printing styles for PDF export */
+@media print {
+  html, body {
+    background: #ffffff !important;
+    color: #000000 !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    -webkit-print-color-adjust: exact !important;
+    print-color-adjust: exact !important;
+  }
+
+  .no-print {
+    display: none !important;
+  }
+
+  .page-break {
+    page-break-after: always !important;
+    break-after: page !important;
+    page-break-inside: avoid !important;
+    break-inside: avoid !important;
+  }
+
+  .page-break-avoid {
+    page-break-inside: avoid !important;
+    break-inside: avoid !important;
+  }
+
+  @page {
+    size: A4 portrait;
+    margin: 10mm 12mm 12mm 12mm;
+  }
+
+  .pdf-page {
+    width: 100% !important;
+    min-height: 275mm !important;
+    box-shadow: none !important;
+    border: none !important;
+    margin: 0 !important;
+    padding: 8mm 6mm !important;
+  }
+}
+
+/* ====================================================================
+   THÈME PARCHEMIN (MODE CLAIR DE JOUR - MANUSCRIT MÉDIÉVAL AUTHENTIQUE)
+   ==================================================================== */
+.theme-parchemin {
+  background-color: #f7f1e5 !important;
+  color: #2b1810 !important;
+}
+
+.theme-parchemin header {
+  background-color: #efe4d0 !important;
+  border-color: #cfba9f !important;
+  color: #2b1810 !important;
+  box-shadow: 0 4px 16px rgba(70, 35, 15, 0.08) !important;
+}
+
+.theme-parchemin header h1 {
+  color: #5c2c10 !important;
+}
+
+.theme-parchemin h2,
+.theme-parchemin h3,
+.theme-parchemin h4,
+.theme-parchemin h5 {
+  color: #4a210a !important;
+}
+
+/* Base Card & Container Overrides */
+.theme-parchemin [class*="bg-[#140f0c]"],
+.theme-parchemin [class*="bg-[#1f1915]"],
+.theme-parchemin [class*="bg-[#1c1612]"],
+.theme-parchemin [class*="bg-[#1a1410]"],
+.theme-parchemin [class*="bg-[#241c16]"],
+.theme-parchemin [class*="bg-[#181310]"],
+.theme-parchemin [class*="bg-[#120e0b]"],
+.theme-parchemin [class*="bg-[#1f2937]"],
+.theme-parchemin [class*="bg-[#100c0a]"] {
+  background-color: #fcf8f0 !important;
+  border-color: #d8c4ad !important;
+  color: #2c1a0e !important;
+}
+
+.theme-parchemin [class*="bg-[#3d2719]"],
+.theme-parchemin [class*="bg-[#2c2018]"],
+.theme-parchemin [class*="bg-[#3b281c]"],
+.theme-parchemin [class*="bg-[#451a03]"],
+.theme-parchemin [class*="bg-[#2f1f15]"],
+.theme-parchemin [class*="bg-[#2a1d15]"],
+.theme-parchemin [class*="bg-[#261d17]"],
+.theme-parchemin [class*="bg-[#382b22]"] {
+  background-color: #ede0cb !important;
+  border-color: #c4ab90 !important;
+  color: #3b1d0e !important;
+}
+
+/* Text Contrasts */
+.theme-parchemin [class*="text-[#f4ecd8]"],
+.theme-parchemin [class*="text-[#d7c9b8]"] {
+  color: #381f12 !important;
+}
+
+.theme-parchemin [class*="text-[#a89988]"],
+.theme-parchemin [class*="text-[#c4b5a5]"],
+.theme-parchemin [class*="text-[#cbd5e1]"] {
+  color: #63432e !important;
+}
+
+.theme-parchemin [class*="text-[#fef08a]"],
+.theme-parchemin [class*="text-[#fcd34d]"],
+.theme-parchemin [class*="text-[#fde047]"],
+.theme-parchemin [class*="text-[#d4af37]"] {
+  color: #854d0e !important;
+}
+
+/* Form Inputs, Selects & Textareas */
+.theme-parchemin input,
+.theme-parchemin select,
+.theme-parchemin textarea {
+  background-color: #ffffff !important;
+  color: #2b1810 !important;
+  border-color: #c9b197 !important;
+}
+
+.theme-parchemin input:focus,
+.theme-parchemin select:focus,
+.theme-parchemin textarea:focus {
+  border-color: #854d0e !important;
+  outline-color: #854d0e !important;
+}
+
+.theme-parchemin input::placeholder,
+.theme-parchemin textarea::placeholder {
+  color: #947b66 !important;
+}
+
+/* Borders */
+.theme-parchemin [class*="border-[#4a3b32]"],
+.theme-parchemin [class*="border-[#3e2e23]"],
+.theme-parchemin [class*="border-[#5c4033]"],
+.theme-parchemin [class*="border-[#4d3a2e]"],
+.theme-parchemin [class*="border-[#524136]"] {
+  border-color: #d6c1a8 !important;
+}
+
+/* Tables in Parchment Theme */
+.theme-parchemin table th {
+  background-color: #ebdcc7 !important;
+  color: #4a210a !important;
+  border-color: #cbb49b !important;
+}
+
+.theme-parchemin table tr:hover {
+  background-color: #f2e6d2 !important;
+}
+
+/* Footer in Parchment Theme */
+.theme-parchemin footer {
+  background-color: #ece1cc !important;
+  border-color: #cfbda6 !important;
+  color: #5c3e29 !important;
+}
+

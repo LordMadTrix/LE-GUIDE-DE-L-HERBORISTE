@@ -1,0 +1,8 @@
+{
+  "name": "Le Guide de l'Herboriste D&D",
+  "description": "Grimoire complet et illustré pour D&D et JDR fantastiques : flore médicinale et magique, traité des 20 gemmes et minéraux de Naheulbeuk (Unités Goltor), recettes alchimiques et export PDF haute fidélité.",
+  "requestFramePermissions": [],
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}
